@@ -51,7 +51,9 @@ body {
     white-space: nowrap !important;
   }
 
+/* ================================ */
 /* ===== HEADER ===== */
+/* ================================ */
 
 .main-header {
     display: flex;
@@ -89,6 +91,7 @@ body {
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 70%);
     text-align: center;
+    font-size: 2rem;
 }
 
 .aboutme-container {
@@ -135,7 +138,9 @@ body {
     color: #3d3d3d;
 }
 
+/* ================================ */
 /* ===== MAIN ===== */
+/* ================================ */
 
 main {
     margin: 100px 0;
@@ -187,7 +192,9 @@ main article {
     color: #444;
 }
 
+/* ================================ */
 /* ===== FOOTER ===== */
+/* ================================ */
 
 .main-footer {
     padding: 50px 0;
@@ -232,13 +239,13 @@ main article {
     color: #fff;
 }
 
-/* ===== MEDIA QUERIES ===== */
+/* ================================ */
+/* ===== TABLET MEDIA QUERIES ===== */
+/* ================================ */
 
 @media screen and (max-width: 1036px) {
     .main-header {
         display: unset;
-        position: relative;
-        padding-top: 50px;
     }
     
     .photo {
@@ -247,13 +254,6 @@ main article {
     
     .photo-container {
         display: none;
-        box-shadow:
-        1.7px 6.9px 2.7px rgba(0, 0, 0, 0.022),
-        4.3px 17.4px 6.9px rgba(0, 0, 0, 0.031),
-        8.9px 35.4px 14.2px rgba(0, 0, 0, 0.039),
-        18.3px 73px 29.2px rgba(0, 0, 0, 0.048),
-        50px 200px 80px rgba(0, 0, 0, 0.07)
-        ;
     }
 
     .photo-tablet {
@@ -261,48 +261,26 @@ main article {
         float: inline-start;
         height: 400px;
         object-fit: contain;
-        margin-left: -80px;
-        margin-top: -110px;
-        padding-right: 30px;
-    }
-    
-    .name-holder {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        background: rgb(255,255,255);
-        background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 70%);
-        text-align: center;
+        margin: -110px 30px 10px -80px;
+        box-shadow:
+        1.7px 1.7px 5.3px rgba(0, 0, 0, 0.028),
+        5.6px 5.6px 17.9px rgba(0, 0, 0, 0.042),
+        25px 25px 80px rgba(0, 0, 0, 0.07)
+        ;
     }
     
     .aboutme-container {
-        padding: 130px 50px 0;
-        width: 100%;
+        padding: 130px 0px 0 50px;
     }
     
     .aboutme-info {
         position: relative;
         width: 100%;
         display: block;
-        flex-direction: column;
-        background-color: #fff;
-        height: 100%;
-        padding: 30px;
-        box-shadow:
-        1.7px 1.7px 2.7px rgba(0, 0, 0, 0.022),
-        4.3px 4.3px 6.9px rgba(0, 0, 0, 0.031),
-        8.9px 8.9px 14.2px rgba(0, 0, 0, 0.039),
-        18.3px 18.3px 29.2px rgba(0, 0, 0, 0.048),
-        50px 50px 80px rgba(0, 0, 0, 0.07)
-        ;
     }
     
     .aboutme-paragraphs {
-        margin-top: 20px;
         display: block;
-        flex-direction: column;
-        gap: 10px;
-        line-height: 155%;
     }
 
     .aboutme-paragraphs p {
@@ -324,9 +302,103 @@ main article {
     .name-tablet {
         font-size: 3rem;
         z-index: 2;
-        display: none;
+        display: block;
         position: absolute;
-        top: -75px;
-        right: 187px;
+        top: -70px;
+        left: 207px;
+        color: #fff;
+    }
+
+    .bottom-bg {
+        height: 500px;
+    }
+
+    .contact-photo {
+        height: 400px;
+    }
+
+    .first-letter {
+        color: #444;
+    }
+
+    .half-color {
+        position: relative;
+    }
+
+    .half-color:before{
+        position:absolute;
+        top:0;	
+        left:0;
+        content: attr(attribute);
+        color:#444;
+        width: 52%;
+	    overflow:hidden;
+    }
+}
+
+/* ================================ */
+/* ===== MOBILE MEDIA QUERIES ===== */
+/* ================================ */
+
+@media screen and (max-width: 696px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+
+    .main-wrapper {
+        padding: 0 10px;
+    }
+
+    .main-footer {
+        flex-direction: column;
+    }
+
+    .bottom-bg {
+        height: 840px;
+    }
+
+    .contact-photo {
+        object-fit: contain;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .name-tablet, .photo-tablet {
+        display: none;
+    }
+
+    .aboutme-container {
+        padding: 30px 0;
+    }
+
+    .photo-container {
+        display: flex;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .photo {
+        max-width: 100%;
+        height: auto;
+        max-height: 500px;
+        margin: auto;
+    }
+
+    .main-header {
+        display: block;
+    }
+
+    .aboutme-header {
+        text-align: left;
+    }
+
+    .socials {
+        text-align: center;
+    }
+
+    .name-holder {
+        font-size: unset;
     }
 }
