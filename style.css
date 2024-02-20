@@ -404,4 +404,13 @@ main article {
     .name-holder {
         font-size: unset;
     }
+
+    .article-header {
+        align-items: baseline;
+    }
+
+    .links {
+        gap: 20px;
+        font-size: 20px;
+    }
 }
