@@ -381,6 +381,7 @@ main article {
         max-width: 100%;
         height: auto;
         max-height: 500px;
+        overflow: hidden;
     }
 
     .photo {
