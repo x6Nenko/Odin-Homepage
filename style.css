@@ -61,11 +61,8 @@ body {
     padding-top: 50px;
 }
 
-.photo {
-    height: 500px;
-}
-
 .photo-container {
+    height: 500px;
     position: relative;
     box-shadow:
     1.7px 6.9px 2.7px rgba(0, 0, 0, 0.022),
@@ -74,6 +71,10 @@ body {
     18.3px 73px 29.2px rgba(0, 0, 0, 0.048),
     50px 200px 80px rgba(0, 0, 0, 0.07)
     ;
+}
+
+.photo {
+    height: 500px;
 }
 
 .photo-tablet {
